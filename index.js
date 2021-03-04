@@ -22,7 +22,7 @@ axios.get(sourceURL).then((response) => {
     entries.push(entry);
   });
 
-  fs.writeFile("./martin.json", JSON.stringify(entries), () => {
+  fs.writeFile("./martin.json", JSON.stringify(entries, null, 2), () => {
     console.log(`martin.json saved: ${entries.length} entries`);
   });
 });
